@@ -1,5 +1,6 @@
 package com.example.demo.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,8 @@ long id;
 String nom;
 @NotNull
 String classe;
+@Column(columnDefinition = "varchar(255) default etudiant")
+String grade;
 
 public long getId() {
 	return id;
