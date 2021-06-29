@@ -14,5 +14,7 @@ public class User {
 	long id;
 	@Column(length = 30,nullable = false)
 	String nom;
+	@Column(nullable = false,unique = true)
+	String email;
 	
 }
