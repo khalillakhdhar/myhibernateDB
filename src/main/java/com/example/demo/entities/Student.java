@@ -5,19 +5,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 import com.sun.istack.NotNull;
 
 @Entity
 public class Student {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Id //clé primaire
+@GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment
 long id;
-@NotNull
+@NotNull //non null
 String nom;
-@NotNull
+@NotBlank
 String classe;
-@Column(columnDefinition = "varchar(255) default etudiant")
+@Column(columnDefinition = "varchar(255) default 'etudiant'")
 String grade;
 
 public long getId() {
