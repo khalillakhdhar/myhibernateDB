@@ -5,11 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.sun.istack.NotNull;
+
 @Entity
 public class Student {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 long id;
+@NotNull
+String nom;
+@NotNull
+String classe;
 
 public long getId() {
 	return id;
@@ -17,6 +23,22 @@ public long getId() {
 
 public void setId(long id) {
 	this.id = id;
+}
+
+public String getNom() {
+	return nom;
+}
+
+public void setNom(String nom) {
+	this.nom = nom;
+}
+
+public String getClasse() {
+	return classe;
+}
+
+public void setClasse(String classe) {
+	this.classe = classe;
 }
 
 
